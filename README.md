@@ -24,9 +24,9 @@ repositories {
 ```kotlin
 
 dependencies {
-	// ...
-	
-	// add the dependency
+    // ...
+
+    // add the dependency
     implementation("com.github.xingray:kotlin-base:0.0.3")
 }
 ```
