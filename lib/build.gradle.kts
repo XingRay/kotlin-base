@@ -11,6 +11,10 @@ plugins {
 
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
+
+    // maven publish
+    // https://docs.gradle.org/current/userguide/publishing_maven.html
+    `maven-publish`
 }
 
 repositories {
@@ -44,4 +48,16 @@ java {
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.github.xingray"
+            artifactId = "kotlin-base"
+            version = "0.0.2"
+
+            from(components["java"])
+        }
+    }
 }
