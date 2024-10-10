@@ -98,3 +98,19 @@ fun File.readIntArray(numbersPerLine: Int = 3): IntArray {
 fun File.relativePathToAbsolutePath(relativePath: String): String {
     return this.resolve(relativePath).absolutePath
 }
+
+fun File?.isExistFile(): Boolean {
+    return this != null && this.exists() && this.isFile
+}
+
+fun File?.isExistDir(): Boolean {
+    return this != null && this.exists() && this.isDirectory
+}
+
+fun List<File>.isAllExistFile(): Boolean {
+    return all { it.isExistFile() }
+}
+
+fun List<File>.isAllExistDir(): Boolean {
+    return all { it.isExistDir() }
+}

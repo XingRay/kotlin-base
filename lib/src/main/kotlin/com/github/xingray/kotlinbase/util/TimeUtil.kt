@@ -1,5 +1,6 @@
 package com.github.xingray.kotlinbase.util
 
+import com.github.xingray.kotlinbase.regex.RegexUtil
 import java.time.*
 import java.time.format.DateTimeFormatter
 import kotlin.math.abs
@@ -764,5 +765,20 @@ object TimeUtil {
 
     fun endSecondsOfYear(year: Int): Long {
         return endSecondsOfYear(year, ZONE_ID_GMT)
+    }
+
+    fun String.isValidTimeInFormatMMSS(): Boolean {
+        return matches(RegexUtil.mmssRegex)
+    }
+
+    fun String.mmssStringToSecond(): Int {
+        val regex = Regex("""(\d{2}):(\d{2})""")
+        val match = regex.matchEntire(this) ?: throw IllegalArgumentException("illegal format, time:${this}")
+        return match.let {
+            val (minutes, seconds) = it.destructured
+            val minutesInt = minutes.toInt()
+            val secondsInt = seconds.toInt()
+            minutesInt * 60 + secondsInt
+        }
     }
 }
