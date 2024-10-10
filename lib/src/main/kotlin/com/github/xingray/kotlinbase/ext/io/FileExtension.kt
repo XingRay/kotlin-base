@@ -1,9 +1,7 @@
-package com.nanosecond.makeup.kotlin.file
+package com.github.xingray.kotlinbase.ext.io
 
-import com.nanosecond.makeup.kotlin.readFloatArray
-import com.nanosecond.makeup.kotlin.readIntArray
 import java.io.File
-import java.util.LinkedList
+import java.util.*
 
 fun File.fileTreeToList(predicate: (File) -> Boolean = { it.exists() && it.isFile }): List<File> {
     if (!this.exists()) {

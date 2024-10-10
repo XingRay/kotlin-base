@@ -1,4 +1,4 @@
-package com.nanosecond.makeup.kotlin.pool
+package com.github.xingray.kotlinbase.pool
 
 import java.util.LinkedList
 import java.util.concurrent.locks.ReentrantLock

@@ -1,6 +1,6 @@
-package com.nanosecond.makeup.kotlin.number
+package com.github.xingray.kotlinbase.ext.array
 
-import com.nanosecond.makeup.kotlin.file.ensureDirExists
+import com.github.xingray.kotlinbase.ext.io.ensureDirExists
 import java.io.File
 
 fun FloatArray.swap(i: Int, j: Int) {

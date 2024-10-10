@@ -1,4 +1,4 @@
-package com.nanosecond.makeup.kotlin.number
+package com.github.xingray.kotlinbase.ext.primary
 
 import kotlin.math.max
 import kotlin.math.min

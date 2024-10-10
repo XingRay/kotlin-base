@@ -1,4 +1,4 @@
-package com.nanosecond.makeup.kotlin.task
+package com.github.xingray.kotlinbase.task
 
 interface Task {
     fun calc(): Int

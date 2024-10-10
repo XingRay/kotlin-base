@@ -1,4 +1,4 @@
-package com.nanosecond.makeup.kotlin
+package com.github.xingray.kotlinbase.ext.container
 
 fun List<Any>?.hasElement(): Boolean {
     if (this == null) {

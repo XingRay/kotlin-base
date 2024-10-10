@@ -1,5 +1,6 @@
-package com.nanosecond.makeup.kotlin.file
+package com.github.xingray.kotlinbase.zip
 
+import com.github.xingray.kotlinbase.ext.io.fileTreeToList
 import java.io.BufferedOutputStream
 import java.io.File
 import java.io.FileInputStream

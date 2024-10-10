@@ -1,4 +1,4 @@
-package com.nanosecond.makeup.kotlin
+package com.github.xingray.kotlinbase.ext
 
 import java.util.*
 

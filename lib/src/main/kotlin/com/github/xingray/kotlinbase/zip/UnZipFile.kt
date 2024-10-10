@@ -1,4 +1,4 @@
-package com.nanosecond.makeup.kotlin.file
+package com.github.xingray.kotlinbase.zip
 
 import java.io.BufferedReader
 import java.io.File

@@ -1,4 +1,4 @@
-package com.nanosecond.makeup.kotlin.number
+package com.github.xingray.kotlinbase.ext.array
 
 import java.nio.ByteBuffer
 
