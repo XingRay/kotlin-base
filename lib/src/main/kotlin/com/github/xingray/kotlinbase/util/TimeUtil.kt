@@ -4,12 +4,13 @@ import java.time.*
 import java.time.format.DateTimeFormatter
 import kotlin.math.abs
 
-// TODO: 改名
-object DateTimeUtil {
+object TimeUtil {
+
     val DEFAULT_DATE_PATTERN: String = "yyyy/MM/dd"
     val DEFAULT_SEPARATOR: String = "/"
     val DAY_IN_SECONDS: Int = 24 * 3600
     val DAY_IN_MILLS: Int = DAY_IN_SECONDS * 1000
+
     val ZONE_ID_GMT: ZoneId = ZoneId.of("+00:00")
     val ZONE_ID_BEIJING: ZoneId = ZoneId.of("+08:00")
 
