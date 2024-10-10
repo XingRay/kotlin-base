@@ -313,7 +313,7 @@ object TimeUtil {
         return ymdNumberToSeconds(ymdNumber, ZONE_ID_GMT)
     }
 
-    fun millsToYmdString(mills: Long, separator: String=DEFAULT_SEPARATOR, zoneId: ZoneId=ZONE_ID_GMT): String {
+    fun millsToYmdString(mills: Long, separator: String = DEFAULT_SEPARATOR, zoneId: ZoneId = ZONE_ID_GMT): String {
         val ints = millsToYmd(mills, zoneId)
         return ints[0].toString() + separator + ints[1] + separator + ints[2]
     }
@@ -322,7 +322,7 @@ object TimeUtil {
         return millsToYmdString(mills, separator, ZoneId.of(zoneId))
     }
 
-    fun secondsToYmdString(seconds: Long, separator: String=DEFAULT_SEPARATOR, zoneId: ZoneId=ZONE_ID_GMT): String {
+    fun secondsToYmdString(seconds: Long, separator: String = DEFAULT_SEPARATOR, zoneId: ZoneId = ZONE_ID_GMT): String {
         return millsToYmdString(seconds * 1000, separator, zoneId)
     }
 
