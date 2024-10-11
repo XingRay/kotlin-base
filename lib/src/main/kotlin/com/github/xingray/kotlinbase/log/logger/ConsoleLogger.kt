@@ -1,4 +1,4 @@
-package android.util.logger
+package com.github.xingray.kotlinbase.log.logger
 
 class ConsoleLogger : Logger {
     override fun log(message: String) {

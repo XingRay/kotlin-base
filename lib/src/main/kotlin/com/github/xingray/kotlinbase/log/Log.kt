@@ -1,10 +1,10 @@
-package android.util
+package com.github.xingray.kotlinbase.log
 
-import android.util.logger.ConsoleLogger
-import android.util.logger.FileLogger
-import android.util.logger.Logger
 import com.github.xingray.kotlinbase.ext.info
 import com.github.xingray.kotlinbase.ext.io.ensureDirExists
+import com.github.xingray.kotlinbase.log.logger.ConsoleLogger
+import com.github.xingray.kotlinbase.log.logger.FileLogger
+import com.github.xingray.kotlinbase.log.logger.Logger
 import com.github.xingray.kotlinbase.util.TimeUtil
 import java.io.File
 import java.time.LocalDate
