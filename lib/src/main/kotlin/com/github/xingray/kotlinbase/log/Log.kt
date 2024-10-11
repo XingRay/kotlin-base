@@ -2,6 +2,8 @@ package com.github.xingray.kotlinbase.log
 
 import com.github.xingray.kotlinbase.ext.info
 import com.github.xingray.kotlinbase.ext.io.ensureDirExists
+import com.github.xingray.kotlinbase.ext.io.ensureFileExists
+import com.github.xingray.kotlinbase.ext.io.isExistDir
 import com.github.xingray.kotlinbase.log.logger.ConsoleLogger
 import com.github.xingray.kotlinbase.log.logger.FileLogger
 import com.github.xingray.kotlinbase.log.logger.Logger
@@ -14,35 +16,26 @@ object Log {
     private const val TAG_MAX_LEN = 20
     private const val THREAD_INFO_MAX_LEN = 10
 
-    private var mLogDir: File = File("log")
-    private var mLogFile = mLogDir.resolve("${TimeUtil.nowToString("yyyyMMddhhmmss")}.log")
-    private var mFileLogger = FileLogger(mLogFile)
-
-    private val mLoggers = mutableListOf(
-        ConsoleLogger(),
-        mFileLogger
+    private val mLoggers = mutableListOf<Logger>(
+        ConsoleLogger()
     )
 
-    init {
-        // 在每次启动时自动删除10天前的日志文件
-        deleteOldLogFiles()
-    }
-
-    fun setLogDir(dir: File) {
-        mLogDir = dir.ensureDirExists()
-        mLogFile = mLogDir.resolve("${TimeUtil.nowToString("yyyyMMddhhmmss")}.log")
-
-        mLoggers.remove(mFileLogger)
-        mFileLogger = FileLogger(mLogFile)
-        mLoggers.add(mFileLogger)
+    fun setLogDir(logDir: File) {
+        deleteOldLogFiles(logDir)
+        logDir.ensureDirExists()
+        val logFile = logDir.resolve("${TimeUtil.nowToString("yyyyMMddhhmmss")}.log").ensureFileExists()
+        val fileLogger = FileLogger(logFile)
+        mLoggers.add(fileLogger)
     }
 
     fun addLogger(logger: Logger) {
         mLoggers.add(logger)
     }
 
-    fun deleteOldLogFiles() {
-        val logDir = mLogDir
+    fun deleteOldLogFiles(logDir: File) {
+        if (!logDir.isExistDir()) {
+            return
+        }
         val logFiles = logDir.listFiles { _, name -> name.endsWith(".log") }
 
         val formatter = DateTimeFormatter.ofPattern("yyyyMMddhhmmss")
