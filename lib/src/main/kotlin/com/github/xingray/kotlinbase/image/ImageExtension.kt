@@ -1,6 +1,6 @@
-package com.github.xingray.coinfarmer.image
+package com.github.xingray.kotlinbase.image
 
-import com.github.xingray.coinfarmer.android.resource.Resource
+import com.github.xingray.kotlinbase.resource.Resource
 import com.github.xingray.kotlinbase.ext.io.ensureFileExists
 import com.github.xingray.kotlinbase.ext.io.outputStream
 import java.awt.AlphaComposite

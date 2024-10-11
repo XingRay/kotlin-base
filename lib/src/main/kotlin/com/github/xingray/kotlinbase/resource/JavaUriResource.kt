@@ -1,4 +1,4 @@
-package com.github.xingray.coinfarmer.android.resource
+package com.github.xingray.kotlinbase.resource
 
 import java.io.InputStream
 import java.net.URI

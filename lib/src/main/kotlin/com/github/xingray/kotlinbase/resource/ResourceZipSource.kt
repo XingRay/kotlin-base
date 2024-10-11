@@ -1,4 +1,4 @@
-package com.github.xingray.coinfarmer.android.resource
+package com.github.xingray.kotlinbase.resource
 
 import com.github.xingray.kotlinbase.zip.ZipSource
 import java.util.zip.ZipEntry

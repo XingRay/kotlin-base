@@ -1,4 +1,4 @@
-package com.nanosecond.makeup.android.collection
+package com.github.xingray.kotlinbase.collection
 
 open class CursorList<T>(list: List<T>) {
     private val mList = mutableListOf<T>()

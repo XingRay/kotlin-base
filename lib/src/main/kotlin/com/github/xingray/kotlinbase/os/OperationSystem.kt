@@ -1,7 +1,5 @@
-package com.github.xingray.coinfarmer.kotlin.os
+package com.github.xingray.kotlinbase.os
 
-import com.github.xingray.kotlinbase.os.CmdExecutor
-import com.github.xingray.kotlinbase.os.WindowsCmdExecutor
 import java.io.File
 
 sealed class OperationSystem {

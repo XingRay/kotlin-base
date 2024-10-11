@@ -1,4 +1,4 @@
-package com.github.xingray.coinfarmer.kotlin.net
+package com.github.xingray.kotlinbase.net
 
 data class IPv4Socket(val ipV4: IPV4, val port: Int) {
 

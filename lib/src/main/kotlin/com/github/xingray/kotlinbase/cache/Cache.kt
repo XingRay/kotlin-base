@@ -1,4 +1,4 @@
-package com.github.xingray.coinfarmer.android.filecache
+package com.github.xingray.kotlinbase.cache
 
 interface Cache {
     fun getString(key: String, defaultValue:String?=null):String?

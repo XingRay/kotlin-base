@@ -1,4 +1,4 @@
-package com.github.xingray.coinfarmer.kotlin.progresstask
+package com.github.xingray.kotlinbase.progresstask
 
 
 class ProgressTask<T> {

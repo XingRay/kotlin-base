@@ -1,4 +1,4 @@
-package com.github.xingray.coinfarmer.android.resource
+package com.github.xingray.kotlinbase.resource
 
 import com.github.xingray.kotlinbase.ext.io.ensureFileExists
 import com.github.xingray.kotlinbase.graphic.Size

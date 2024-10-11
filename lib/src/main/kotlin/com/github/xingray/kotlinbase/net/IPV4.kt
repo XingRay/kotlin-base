@@ -1,4 +1,4 @@
-package com.github.xingray.coinfarmer.kotlin.net
+package com.github.xingray.kotlinbase.net
 
 data class IPV4(val address0: Int, val address1: Int, val address2: Int, val address3: Int) {
 

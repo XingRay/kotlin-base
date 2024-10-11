@@ -1,4 +1,4 @@
-package com.github.xingray.coinfarmer.image
+package com.github.xingray.kotlinbase.image
 
 data class Image(
     var width: Int = 0,
@@ -6,23 +6,22 @@ data class Image(
     var data: ByteArray? = null,
 
 
+    /*
+        \rotate   0        90           180         270
+        mirror
+                888888  88                 88   8888888888
+          0     88      88  88             88       88  88
+                8888    8888888888       8888           88
+                88                         88
+                88                     888888
 
-/*
-    \rotate   0        90           180         270
-    mirror
-            888888  88                 88   8888888888
-      0     88      88  88             88       88  88
-            8888    8888888888       8888           88
-            88                         88
-            88                     888888
+                888888  8888888888     88              88
+                    88  88  88         88          88  88
+          1       8888  88             8888    8888888888
+                    88                 88
+                    88                 888888
 
-            888888  8888888888     88              88
-                88  88  88         88          88  88
-      1       8888  88             8888    8888888888
-                88                 88
-                88                 888888
-
-*/
+    */
     var rotate: Int = 0,
     var mirror: Boolean = false,
 

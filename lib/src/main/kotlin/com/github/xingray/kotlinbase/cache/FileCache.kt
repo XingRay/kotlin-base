@@ -1,4 +1,4 @@
-package com.github.xingray.coinfarmer.android.filecache
+package com.github.xingray.kotlinbase.cache
 
 import com.github.xingray.kotlinbase.ext.io.ensureDirExists
 import java.io.File

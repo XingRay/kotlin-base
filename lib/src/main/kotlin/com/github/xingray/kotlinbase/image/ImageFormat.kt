@@ -1,4 +1,4 @@
-package com.github.xingray.coinfarmer.image
+package com.github.xingray.kotlinbase.image
 
 enum class ImageFormat(val code: Int) {
     NV21(0),
