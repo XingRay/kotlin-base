@@ -27,6 +27,6 @@ dependencies {
     // ...
 
     // add the dependency
-    implementation("com.github.xingray:kotlin-base:0.0.15")
+    implementation("com.github.xingray:kotlin-base:0.0.16")
 }
 ```
