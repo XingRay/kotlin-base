@@ -55,7 +55,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.github.xingray"
             artifactId = "kotlin-base"
-            version = "0.0.16"
+            version = "0.0.17"
 
             from(components["java"])
         }
