@@ -1,5 +1,6 @@
 package com.github.xingray.kotlinbase.util
 
+import com.github.xingray.kotlinbase.interfaces.function.serializable.SFunction
 import java.lang.invoke.SerializedLambda
 import java.lang.reflect.Field
 import java.lang.reflect.InvocationTargetException

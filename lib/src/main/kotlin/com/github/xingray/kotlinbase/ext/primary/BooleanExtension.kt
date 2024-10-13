@@ -1,4 +1,4 @@
-package com.github.xingray.uiautomatorproxy.kotlin
+package com.github.xingray.kotlinbase.ext.primary
 
 fun Boolean.trueOrNull(): Boolean? {
     return if (this) {

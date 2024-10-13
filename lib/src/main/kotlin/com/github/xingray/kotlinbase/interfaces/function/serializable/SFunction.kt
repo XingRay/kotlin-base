@@ -1,4 +1,4 @@
-package com.github.xingray.kotlinbase.util
+package com.github.xingray.kotlinbase.interfaces.function.serializable
 
 import java.io.Serializable
 import java.util.function.Function
